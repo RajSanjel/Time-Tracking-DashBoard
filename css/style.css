@@ -191,16 +191,17 @@ main {
     color: white !important;
 }
 
-@media (min-width:500px) {
+
+@media (min-width:1000px) {
     main {
         margin-top: 0;
         grid-auto-flow: column-reverse;
-        width: 1150px;
-        height: 55%;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        column-gap: 10px;
-        row-gap: 15px;
+        width: fit-content;
+        height: 400px;
+        grid-template-columns: 200px auto auto auto;
+        column-gap: 30px;
+        row-gap: 40px;
+        justify-items: center;
     }
 
     body {
@@ -209,12 +210,31 @@ main {
 
     .report_for {
         grid-row: 1 / span 2;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+
+    .selection_menu {
+        display: flex;
+        flex-direction: column;
+        height: 33%;
+        width: fit-content;
+        align-items: flex-start;
+        padding: 0 30px;
     }
 
     .profile {
+        width: fit-content;
         flex-direction: column;
         align-items: flex-start;
-        padding: 20px 0;
+        padding: 20px 30px;
+        justify-content: space-evenly;
+        height: 60%;
+    }
+
+    .profile h2 {
+        font-size: 26px;
     }
 
     .work,
@@ -225,5 +245,28 @@ main {
     .self_care {
         width: 220px;
         height: 105%;
+    }
+
+    .box {
+        height: 80%;
+    }
+
+    .info p {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .box:hover {
+        background: hsl(235, 41%, 34%);
+        cursor: pointer;
+    }
+
+    .selection_menu:hover {
+        cursor: pointer;
+    }
+
+    .box img:hover {
+        cursor: pointer;
+        filter: brightness(600%);
     }
 }
