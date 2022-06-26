@@ -58,4 +58,4 @@ async function getData(file) {
     }
 }
 
-getData('../api/data.json')
+getData('./api/data.json')
