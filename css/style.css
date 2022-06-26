@@ -157,10 +157,6 @@ main {
     top: 20%;
 }
 
-.hidden {
-    display: none;
-}
-
 .info {
     display: grid;
     grid-auto-flow: column;
